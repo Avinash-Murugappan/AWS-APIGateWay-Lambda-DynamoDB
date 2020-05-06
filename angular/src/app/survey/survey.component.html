@@ -1,0 +1,83 @@
+
+<! -- SWE 645 Assignment4, Team members: Avinash[G01163980], Rashi[G01225299], Rushil[G01203932], Mithilaesh[G01206238].-->
+ <h1 class="feedbackheading">Student survey</h1>
+ <form (ngSubmit) = "onSubmit()" #studentForm="ngForm">
+   <table width="80%">
+     <tbody>
+       <tr>
+         <th>First Name</th>
+         <td><input type="text" name="firstname" style="width: 100%;" required [(ngModel)]="record.firstname"/></td>
+       </tr>
+       <tr>
+         <th>Last Name</th>
+         <td><input type="text" name="lastname" style="width: 100%;" required [(ngModel)]="record.lastname" /></td>
+       </tr>
+       <tr>
+         <th>Street Address</th>
+         <td><input type="text" name="streetAddress" style="width: 100%;" required [(ngModel)]="record.streetAddress" /></td>
+       </tr>
+
+       <tr>
+         <th>City</th>
+         <td><input type="text" name="city" style="width: 100%;" required [(ngModel)]="record.city" /></td>
+       </tr>
+       <tr>
+         <th>State</th>
+         <td><input type="text" name="state" style="width: 100%;" required [(ngModel)]="record.state" /></td>
+       </tr>
+       <tr>
+         <th>Zip</th>
+         <td><input type="number" name="zip" style="width: 100%;" required [(ngModel)]="record.zip" /></td>
+       </tr>
+       <tr>
+         <th>Phone</th>
+         <td><input type="tel" name="phone" style="width: 100%;" required [(ngModel)]="record.phone" /></td>
+       </tr>
+       <tr>
+         <th>Email</th>
+         <td><input type="email" name="email" style="width: 100%;" placeholder="aarunach@gmu.edu" required [(ngModel)]="record.email" /></td>
+       </tr>
+       <tr>
+         <th>Date</th>
+         <td><input type="date" name="dateOfSurvey" style="width: 100%;" placeholder="mm/dd/yyyy" required [(ngModel)]="record.dateOfSurvey" /></td>
+       </tr>
+       <tr>
+         <th>What do you like about the campus?</th>
+         <td><label><input name="likedAboutCampus" type="checkbox" value="students" [(ngModel)]="likedAboutCampus.students" />Students</label><br/>
+         <label><input name="likedAboutCampus" type="checkbox" value="location" [(ngModel)]="likedAboutCampus.location" />Location</label><br/>
+         <label><input name="likedAboutCampus" type="checkbox" value="campus" [(ngModel)]="likedAboutCampus.campus" />Campus</label><br/> 
+         <label><input name="likedAboutCampus" type="checkbox" value="atmosphere" [(ngModel)]="likedAboutCampus.atmosphere" />Atmosphere</label><br/>
+         <label><input name="likedAboutCampus" type="checkbox" value="rooms" [(ngModel)]="likedAboutCampus.rooms" />Dorm rooms</label><br/>
+         <label><input name="likedAboutCampus" type="checkbox" value="sports" [(ngModel)]="likedAboutCampus.sports" />Sports</label></td>
+       </tr>
+       <tr>
+         <th>What made you interested in this university?</th>
+         <td><label><input name="originOfInterest" type="radio" value="friends" [(ngModel)]="record.originOfInterest" />Friends</label><br/>
+         <label><input name="originOfInterest" type="radio" value="television" [(ngModel)]="record.originOfInterest"/>Television</label><br/>
+         <label><input name="originOfInterest" type="radio" value="internet" [(ngModel)]="record.originOfInterest"/>Internet</label><br />
+         <label><input name="originOfInterest" type="radio" value="other" [(ngModel)]="record.originOfInterest"/>Other</label></td>
+       </tr>
+       <tr>
+         <th>How likely that you recommend this university to other prospective students?</th>
+         <td><select name="likelyhoodOfRecommendation" [(ngModel)]="record.likelyhoodOfRecommendation">
+             <option selected="selected">Very Likely</option>
+             <option>Likely</option>
+             <option>Unlikely</option>
+         </select></td>
+       </tr>
+       <tr>
+         <th>Raffle</th>
+         <td><input type="text" name="raffle" placeholder="Enter atleast 10 numbers seperated with comma" style="width: 100%;" [(ngModel)]="record.raffle" /></td>
+       </tr>
+       <tr>
+         <th>Comments</th>
+         <td><textarea name="comments" rows="4" style="width: 100%;" [(ngModel)]="record.comments"></textarea></td>
+       </tr>
+       <tr >
+         <td colspan=2 style="text-align: center;">
+          <button type="submit" class="btn btn-default" style="margin:5px;">Submit</button>
+         <input type="reset" value="reset" /></td>
+         </tr>
+     </tbody>
+   </table>
+ </form>

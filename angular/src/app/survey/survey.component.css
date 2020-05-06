@@ -1,0 +1,53 @@
+
+
+.nav {
+	background-color: red;
+	align-content: center;
+	width: auto;
+	text-align: center;
+}
+
+h1.heading {
+	color: white;
+	padding: 10px 10px 10px 10px
+}
+
+h1.feedbackheading {
+	color: blue
+}
+
+img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.feedbackheading {
+	border: blue;
+	border-width: 5px;
+	border-style: solid;
+	padding: 0px;
+	color: blue;
+}
+
+h2 {
+	font-size: 28px;
+	color: green;
+}
+
+form{
+	font-size: 18px;
+	color: white;
+	border: black;
+	border-width: 3px;
+	border-style: solid;
+	padding: 0px;
+	background-color:grey;
+}
+
+.error {
+	color: red;
+	position: center;
+	font-size: 18px;
+	column-span: 2;
+}

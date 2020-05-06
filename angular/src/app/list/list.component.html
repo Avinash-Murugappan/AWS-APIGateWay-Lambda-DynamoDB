@@ -1,0 +1,38 @@
+<! -- SWE 645 Assignment4, Team members: Avinash[G01163980], Rashi[G01225299], Rushil[G01203932], Mithilaesh[G01206238].-->
+<p *ngIf="list==null">Loading...</p>
+<table *ngIf="list!=null">
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Street Address</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Zipcode</th>
+        <th>Phone number</th>
+        <th>Email</th>
+        <th>Date of Survey</th>
+        <th>Liked about Campus</th>
+        <th>Origin of Interest</th>
+        <th>Likelyhood of Recommendation</th>
+        <th>Raffle</th>
+        <th>Comments</th>
+    </tr>
+
+    <tr *ngFor="let index of list">
+        <td>{{index?.firstname}}</td>
+        <td>{{index?.lastname}}</td>
+        <td>{{index?.streetAddress}}</td>
+        <td>{{index?.city}}</td>
+        <td>{{index?.state}}</td>
+        <td>{{index?.zip}}</td>
+        <td>{{index?.phone}}</td>
+        <td>{{index?.email}}</td>
+        <td>{{index?.dateOfSurvey}}</td>
+        <td>{{index?.likedAboutCampus}}</td>
+        <td>{{index?.originOfInterest}}</td>
+        <td>{{index?.likelyhoodOfRecommendation}}</td>
+        <td>{{index?.raffle}}</td>
+        <td>{{index?.comments}}</td>
+       </tr>
+       
+</table>
